@@ -87,14 +87,5 @@
       },
 
       
-      {  id: 1010,
-        subject: "Literature",
-        location: "Manchester",
-        price: 2500,
-        spaces: 5,
-        img: "subjectPic/literature.jpg",
-        icon: "fa fa-book"
       
-      },
-  
   ]
