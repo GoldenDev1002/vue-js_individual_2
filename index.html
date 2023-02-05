@@ -119,7 +119,7 @@
       <div class="row" id="cartSection">
         <div class="col-md-6 col-lg-4" v-for="cartItem in cart">
           <div class="card mb-2 cards">
-            <img :src="cartItem.lesson.img" alt="cartItem.lesson.subject" class="card-img-top">
+            <img :src="imageUrl + cartItem.lesson.img" alt="cartItem.lesson.subject" class="card-img-top">
             <div class="card-text mb-0">
               <i v-bind:class="cartItem.lesson.icon" class="fa-2x"></i>
             </div>
