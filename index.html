@@ -60,7 +60,7 @@
           <div id="lessonSection" class="row">
             <div class="col-md-6 col-lg-4" v-for="lesson in lessons" :key="lesson.id">
               <div class="card mb-2 cards">
-                <img :src="lesson.img" alt="lesson.subject" class="card-img-top">
+                <img :src="imageUrl + lesson.img" alt="lesson.subject" class="card-img-top">
                 <div class="card-text mb-0 d-flex justify-content-end">
                   <i v-bind:class="lesson.icon" class="fa-2x"></i>
                 </div>
@@ -145,7 +145,7 @@
 
           <div class="col-md-4">
             <label for="name">Number</label><br />
-            <input type="text" v-model.number="numberInput" placeholder="Phone Number" name="phoneNumber" id="numbering">
+            <input type="text" v-model.number="numberInput" placeholder="Phone Number" name="phone" id="numbering">
           </div>
 
           <p> </p>

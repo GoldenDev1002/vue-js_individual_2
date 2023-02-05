@@ -32,13 +32,14 @@ let newApp = new Vue(
         sortOption: "ascending",
         ascending: "",
         descending: "",
-        url: "http://localhost:4500/orders",
-        urls: "http://localhost:4500/lessons",
+        imageUrl : "https://webbased-env.eba-p5pzhqty.eu-west-2.elasticbeanstalk.com/image/",
+        url: "https://webbased-env.eba-p5pzhqty.eu-west-2.elasticbeanstalk.com/orders",
+        urls: "https://webbased-env.eba-p5pzhqty.eu-west-2.elasticbeanstalk.com/lessons",
         cartIcon: "fa fa-cart-shopping",
       },
       filters: {},
       created: function () {
-        fetch("http://localhost:4500/lessons")
+        fetch("https://webbased-env.eba-p5pzhqty.eu-west-2.elasticbeanstalk.com/lessons")
           .then((response) => response.json())
           .then((lessons) => {
             this.lessons = lessons;
@@ -102,7 +103,7 @@ let newApp = new Vue(
   
         async updateLesson({ lesson_id, spaces }) {
           try {
-            const url = `http://localhost:4500/lessons/${lesson_id}`;
+            const url = `https://webbased-env.eba-p5pzhqty.eu-west-2.elasticbeanstalk.com/lessons/${lesson_id}`;
   
             fetch(url, {
               method: "PUT",
@@ -145,8 +146,8 @@ let newApp = new Vue(
   
           this.cart.forEach(async (item) => {
             this.createOrder({
-              "name": this.nameInput.value,
-              'phone': this.numberInput.value,
+              "name": this.nameInput,
+              'phone': this.numberInput,
               "id": item.lesson.lessonId,
               "spaces": item.lesson.spaces,
             });
